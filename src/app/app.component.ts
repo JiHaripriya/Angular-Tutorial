@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   pageName = 'blog';
+
+  // Method
+  getName():String {
+    return "Haripriya";
+  }
+
+  // Object
+  person = {
+    name: "Haripriya",
+    age: 22
+  }
+
+  // Array
+  names = ['Abc', 'Bcd']
+
 }
