@@ -1,0 +1,39 @@
+.navbar {
+    border-radius: 0 !important;
+}
+
+.navbar-brand {
+    height: 55px !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.ml-0 { 
+    margin-left: 0 !important;
+}
+
+.pt-5 {
+    padding-top: 15px !important;
+}
+
+.pb-5 {
+    padding-bottom: 15px !important;
+}
+
+.pl-5 {
+    padding-left: 15px !important;
+}
+
+.pr-5 {
+    padding-right: 15px !important;
+}
+
+.border-blue {
+    border: 1px solid dodgerblue;
+}
