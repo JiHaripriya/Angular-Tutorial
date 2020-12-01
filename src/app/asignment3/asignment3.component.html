@@ -1,0 +1,15 @@
+<div class="container">
+    <hr>
+    <h5>Assignment 3</h5>
+    <hr>
+
+    <button class="btn btn-warning" (click)="toggleDisplay()">Display Details</button> <hr>
+    
+    <p *ngIf="displayContent"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos eum deserunt asperiores illo, nemo tenetur neque, velit 
+    sapiente harum sit atque, ea error non ipsa? Veritatis earum nam eum! Maxime.</p>
+    
+    <p *ngFor="let log of displayLogs; let i = index" 
+        [ngStyle]="{backgroundColor: i >= 4 ? 'blue': 'none'}"
+        [ngClass]="{log: limit && i >= 4}"> {{ log }} 
+    </p>
+</div>
