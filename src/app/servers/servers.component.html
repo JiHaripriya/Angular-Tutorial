@@ -10,7 +10,10 @@
 </button>
 <hr>
 
-<p [innerText]="serverText"></p>
+<p *ngIf="serverCreated; else noServer">Server was created, server name is {{ serverName }}</p>
 
-<app-server></app-server>
-<app-server></app-server>
+<ng-template #noServer>
+    <p> No server was created </p>
+</ng-template>
+
+<app-server *ngFor="let server of servers"></app-server>
