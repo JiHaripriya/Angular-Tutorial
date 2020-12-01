@@ -2,13 +2,9 @@
 
 <label for="username">Username</label>
 <input type="text" name="username" id="username" 
-    class="form-control" [(ngModel)]="username" autocomplete="off" (keyup)="checkUserName()">
+    class="form-control" [(ngModel)]="username" autocomplete="off">
+<hr>
+<p>Output:</p>
+<p>{{ username }}</p>
 
-<br>
-<div>
-    <p>Output:</p>
-    <p *ngIf="username != 'Enter a username'">{{ username }}</p>
-
-</div>
-
-<button class="btn btn-secondary" [disabled]="!userNameCheck" (click)="clearInput()">Clear Username</button>
+<button class="btn btn-secondary" [disabled]="username === ''" (click)="username = ''">Clear Username</button>

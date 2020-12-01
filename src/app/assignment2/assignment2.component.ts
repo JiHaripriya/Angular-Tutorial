@@ -8,25 +8,11 @@ import { Component, OnInit } from '@angular/core';
 
 export class Assignment2Component implements OnInit {
 
-  username:string = "Enter a username";
-  userNameCheck:boolean = false;
+  username:string = "";
   
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  checkUserName() {
-    console.log(this.username)
-    if(this.username != "") {
-      this.userNameCheck = true;
-    }
-    else {
-      this.userNameCheck = false;
-    }
-  }
-
-  clearInput() {
-    this.username = "";
-  }
 }
