@@ -14,9 +14,15 @@ export class ShoppingListComponent implements OnInit {
     new Ingredient('Maggie Packet', 100)
   ];
 
+  newItem:Ingredient;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addShoppingItem(shoppingItem: Ingredient){
+    this.ingredients.push(shoppingItem);
   }
 
 }

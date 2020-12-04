@@ -2,12 +2,17 @@
     
     <!-- List on the left side -->
     <div class="col-md-5"> 
-        <app-recipe-list></app-recipe-list>
+        <app-recipe-list (selectedRecipe)="recipeSelected = $event"></app-recipe-list>
     </div>
 
     <!-- Recipe detail list -->
     <div class="col-md-7">
-        <app-recipe-details></app-recipe-details>
+        <app-recipe-details 
+        *ngIf="recipeSelected; else errMsg"
+        [recipe]="recipeSelected"></app-recipe-details>
+        <ng-template #errMsg>
+            <p>Please select a recipe</p>
+        </ng-template>
     </div>
 
 </div>

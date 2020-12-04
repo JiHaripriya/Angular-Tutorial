@@ -1,14 +1,26 @@
 <!-- App header -->
-<app-header></app-header>
+<app-header (featureSelected)="loadedFeature = $event"></app-header>
 
 <!-- Main Contents of SAP -->
 <div class="container">
     <div class="row pt-3">
-        <div class="col-xl-12 border border-secondary pt-2">
-            <app-recipes></app-recipes>
+        <div class="col-xl-12 border border-secondary pt-2" *ngIf="loadedFeature ==='recipe'">
+            <app-recipes ></app-recipes>
         </div>
-        <div class="col-xl-12 pt-3 pb-3">
-            <app-shopping-list></app-shopping-list>
+        <!-- <div class="col-xl-12 pt-3 pb-3" *ngIf="loadedFeature ==='shopping-list'">
+            <app-shopping-list  ></app-shopping-list>
+        </div> -->
+
+        <div class="col-xl-12 pt-3 pb-3" *appUnless="loadedFeature ==='shopping-list'">
+            <app-shopping-list  ></app-shopping-list>
         </div>
     </div>
+</div>
+
+<hr>
+
+<!-- First basic custom directive -->
+<div class="container">
+    <p appBasicHighlight class="pl-3">Style me with basic directive</p>
+    <p appBetterHighlight class="pl-3" [defaultColor]="'yellow'">Style me with basic directive</p>
 </div>
