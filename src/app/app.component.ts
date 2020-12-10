@@ -21,6 +21,8 @@ export class AppComponent implements OnInit{
       'gender': new FormControl('female'),
       'hobbies': new FormArray([])
     });
+
+    this.signupForm.valueChanges.subscribe
   }
 
   onSubmit() {
@@ -43,7 +45,7 @@ export class AppComponent implements OnInit{
     const promise = new Promise<any>((res, rej) => {
       setTimeout(()=> {
         if(control.value === 'test@test.com'){
-          resolveForwardRef({'emailIsForbidden': true});
+          res({'emailIsForbidden': true});
         }
       })
     })
