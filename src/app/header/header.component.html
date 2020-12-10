@@ -8,20 +8,20 @@
         <!-- Link to other 'pages' -->
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto navbar-expand">
-                <li class="nav-item mr-5 ml-5">
-                    <a href="#" class="nav-link active" (click)="onSelect('recipe')">Recipes</a>
+                <li class="nav-item mr-5 ml-5" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/recipes">Recipes</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link" (click)="onSelect('shopping-list')">Shopping List</a>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/shopping-list">Shopping List</a>
                 </li>
             </ul>
             
             <ul class="navbar-nav mr-5">
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" role="button" appDropdown>Manage</a>
+                    <a style="cursor: pointer;" class="nav-link dropdown-toggle" role="button" appDropdown>Manage</a>
                     <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a href="#" class="nav-link">Save Data</a></li>
-                        <li class="dropdown-item"><a href="#" class="nav-link">Load Data</a></li>
+                        <li class="dropdown-item"><a style="cursor: pointer;" class="nav-link">Save Data</a></li>
+                        <li class="dropdown-item"><a style="cursor: pointer;" class="nav-link">Load Data</a></li>
                     </ul>
                 </li>
             </ul>

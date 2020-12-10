@@ -1,18 +1,21 @@
 <!-- App header -->
-<app-header (featureSelected)="loadedFeature = $event"></app-header>
+<app-header></app-header>
 
 <!-- Main Contents of SAP -->
 <div class="container">
     <div class="row pt-3">
-        <div class="col-xl-12 border border-secondary pt-2" *ngIf="loadedFeature ==='recipe'">
+        <!-- <div class="col-xl-12 border border-secondary pt-2" *ngIf="loadedFeature ==='recipe'">
             <app-recipes ></app-recipes>
-        </div>
+        </div> -->
         <!-- <div class="col-xl-12 pt-3 pb-3" *ngIf="loadedFeature ==='shopping-list'">
             <app-shopping-list  ></app-shopping-list>
         </div> -->
 
-        <div class="col-xl-12 pt-3 pb-3" *appUnless="loadedFeature ==='shopping-list'">
+        <!-- <div class="col-xl-12 pt-3 pb-3" *appUnless="loadedFeature ==='shopping-list'">
             <app-shopping-list  ></app-shopping-list>
+        </div> -->
+        <div class="col-xl-12 pt-2">
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

@@ -7,12 +7,13 @@
 
     <!-- Recipe detail list -->
     <div class="col-md-7">
-        <app-recipe-details 
+        <!-- <app-recipe-details 
         *ngIf="recipeSelected; else errMsg"
         [recipe]="recipeSelected"></app-recipe-details>
         <ng-template #errMsg>
-            <p>Please select a recipe</p>
-        </ng-template>
+           
+        </ng-template> -->
+        <router-outlet></router-outlet>
     </div>
 
 </div>

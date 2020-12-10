@@ -1,5 +1,5 @@
-<a href="#" class="list-group-item clearfix mb-2 border border-primary" 
-(click)="onSelected()">
+<a style="cursor: pointer;" class="list-group-item clearfix mb-2 border border-primary" 
+[routerLink]="[index]" routerLinkActive="active">
     <div class="float-left">
         <h4 class="list-group-item-heading"> {{ recipe.name }} </h4>
         <p class="light-group-item-text"> {{ recipe.description }} </p>
