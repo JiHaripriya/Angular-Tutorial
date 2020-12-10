@@ -1,4 +1,4 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
 import { Recipes } from './recipes.model';
@@ -20,9 +20,7 @@ export class RecipeService {
                 'https://images.mygoodtimes.in/wp-content/uploads/2018/08/31063759/iStock-643845180-1.jpg', 
                 [new Ingredient('Taste maker', 10), new Ingredient('Noodle', 120)])
   ];
-  
-  recipeSelected = new EventEmitter<Recipes>();
-  
+    
   constructor(private slService: ShoppingListService) { }
 
   getRecipe(index: number) {
