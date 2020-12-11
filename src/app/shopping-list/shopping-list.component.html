@@ -4,7 +4,7 @@
         <hr>
         <ul class="list-group pb-3">
             <a class="list-group-item nav-link" style="cursor: pointer;"
-            *ngFor="let ing of ingredients"> {{ ing.name }} ({{ ing.amount }} rs)</a>
+            *ngFor="let ing of ingredients; let i = index" (click)="onEditItem(i)"> {{ ing.name }} ({{ ing.amount }} rs)</a>
         </ul>
     </div>
 </div>
